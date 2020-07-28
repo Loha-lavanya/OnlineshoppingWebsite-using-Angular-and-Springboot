@@ -1,0 +1,17 @@
+<div class="main-content page-m">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <div *ngIf="info.token; else loggedOut">
+      <h3>We are in home now</h3>
+      <button  routerLink='/products' class="btn btn-success">Go To the Products</button>
+        <button class="btn btn-secondary" (click)="logout()">Logout</button>
+     </div>
+
+      <ng-template #loggedOut>
+        Please login First.
+      
+        <button class="btn btn-success" routerLink='/auth/login'>Login</button>
+      </ng-template>
+    </div>
+  </div>
+</div>

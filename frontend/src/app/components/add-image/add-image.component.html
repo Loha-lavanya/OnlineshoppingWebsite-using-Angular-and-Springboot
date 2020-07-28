@@ -1,0 +1,50 @@
+<div class="main-content page-m">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+
+            <!--<div *ngIf="isAdded; else add">
+                <button  routerLink='/adminproductlist'class="btn btn-success">Go Back</button>
+              
+               </div>-->
+
+            <h3>Add products</h3>
+  <div  style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Product Name</label>
+      <input type="text" class="form-control" id="productName" required [(ngModel)]="product.name" name="productName">
+    </div>
+
+    <div class="form-group">
+      <label for="name"> Product Price</label>
+      <input type="text" class="form-control" id="unitPrice" required [(ngModel)]="product.unitPrice" name="unitPrice">
+    </div>
+
+
+    <div class="form-group">
+        <label for="name"> Product Description</label>
+        <textarea class="form-control" id="description" required [(ngModel)]="product.description" name="description"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="name"> Product Category</label>
+        <input type="text" class="form-control" id="category" required [(ngModel)]="product.category" name="category">
+      </div>
+      
+  
+    <div class="form-group">
+        <label for="img">Select image:</label>
+        <input type="file"  class="form-control" id="img" required [(ngModel)]="product.imageUrl"name="img" accept="image/*">
+
+       
+      
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+
+        </div>
+    </div>
+    </div>

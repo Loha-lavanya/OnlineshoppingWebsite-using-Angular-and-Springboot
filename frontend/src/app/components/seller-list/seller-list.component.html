@@ -1,0 +1,34 @@
+<div class="main-content page-m">
+    <div class="section-content section-content-p40">
+        <div class="container-fluid">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <h2>Seller List</h2>
+                </div>
+                <div class="panel-body">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let seller of sellers | async">
+                        <td>{{seller.firstName}}</td>
+                        <td>{{seller.lastName}}</td>
+                        <td>{{seller.emailId}}</td>
+                        <td><button (click)="deleteSeller(seller.id)" class="btn btn-danger">Delete</button>
+                            <button (click)="updateSeller(seller.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                            <button (click)="sellerDetails(seller.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+      </div>
+      </div>
+      </div>      

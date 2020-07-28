@@ -1,0 +1,57 @@
+<!--<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div class="main-content">
+    <div class="section-content sectio-content-p30">
+        <div class="container-fluid">
+
+            <form  #payment="ngForm"  method="post" (ngSubmit)="PaymentProcess()" >  **action="/pay"**
+                <div class="col-50">
+                    <h3>Payment</h3>
+                    <label>Accepted Cards</label>
+                    <div class="icon-container">
+                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                    </div>
+                       
+                  **  <p [(ngModel)]="card.price" >Total Price:{{ totalPrice | currency:'Rs' }} </p>**
+                  <label for="price">Total</label>
+                  <p>Total Price:{{ totalPrice | currency:'Rs' }}</p>
+                  <input type="text" id="price" name="price" value="10"  [(ngModel)]="card.price" required 
+                  #price="ngModel"   [class.is-invalid]="price.invalid && price.touched">
+                  <small class="text-danger" [class.d-none]="price.valid || price.untouched">Price is required Field</small>
+                   
+
+                    <label for="currency">Currency</label>
+                    <input type="text" id="currency" name="currency" placeholder="Enter Currency"  [(ngModel)]="card.currency" required 
+                    #currency="ngModel"   [class.is-invalid]="currency.invalid && currency.touched">
+                    <small class="text-danger" [class.d-none]="currency.valid || currency.untouched">Currency is required Field</small>
+
+                    <label for="method">Payment Method</label>
+                    <input type="text" id="method" name="method" placeholder="Payment Method"  [(ngModel)]="card.method" required
+                    #method="ngModel"   [class.is-invalid]="method.invalid && method.touched">
+                    <small class="text-danger" [class.d-none]="method.valid || method.untouched">Payment Method is required Field</small>
+
+
+                    <label for="intent">Intent</label>
+                    <input type="text" id="intent" name="intent" value="sale"  [(ngModel)]="card.intent" required
+                    #intent="ngModel"   [class.is-invalid]="intent.invalid && intent.touched">
+                    <small class="text-danger" [class.d-none]="intent.valid || intent.untouched">Intent is required Field</small>
+
+
+                    <label for="description">Payment Description</label>
+                    <input type="text" id="description" name="description" placeholder="Payment Description"  [(ngModel)]="card.description" required
+                    #description="ngModel"   [class.is-invalid]="description.invalid && description.touched">
+                    <small class="text-danger" [class.d-none]="description.valid || description.untouched">Payment Description is required Field</small>
+
+
+                </div>
+
+                <input type="submit" [disabled]="payment.form.invalid" value="Continue to checkout" class="btn">
+            </form>
+        </div>
+    </div>
+</div>-->

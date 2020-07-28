@@ -1,0 +1,38 @@
+
+<div class="main-content page-m">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+
+
+      <div *ngIf="info.token">
+        <h2 style="text-align: center;">Welcome {{info.username}} !! </h2>
+      </div>
+      <h2>Here are your previous orders</h2>
+
+      <div class="card my-5">
+        <div class="card-body">
+          <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+              <tr>
+               
+                <th scope="col">Quantity</th>
+                <th scope="col">Total amount</th>
+                <th scope="col">Order Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let order of orders">
+               
+               
+                <td>{{ order.quantity }}</td>
+                <td>{{ order.price }}</td>
+                <td>{{ order.orderOn }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
